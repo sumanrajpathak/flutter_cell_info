@@ -10,8 +10,6 @@ dependencies:
   flutter:
     sdk: flutter
   flare_flutter: ^3.0.2
-  dartdoc: ^6.2.2
-
 dev_dependencies:
   flutter_test:
     sdk: flutter

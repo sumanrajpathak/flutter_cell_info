@@ -1,5 +1,5 @@
 name: flutter_cell_info
-description: Cell Info Plugin to get cellular info based on NetMonster.
+description: This package allows you to obtain your public cellular info and many other information about it,based on NetMonster.
 version: 0.0.1
 homepage: https://github.com/devsumanrazz/flutter_cell_info
 
@@ -10,6 +10,7 @@ dependencies:
   flutter:
     sdk: flutter
   flare_flutter: ^3.0.2
+  dartdoc: ^6.2.2
 
 dev_dependencies:
   flutter_test:

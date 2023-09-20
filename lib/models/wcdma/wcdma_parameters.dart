@@ -17,16 +17,16 @@ class Wcdma {
 
   Wcdma(
       {this.bandWCDMA,
-        this.signalWCDMA,
-        this.connectionStatus,
-        this.network,
-        this.ci,
-        this.lac,
-        this.psc,
-        this.cid,
-        this.rnc,
-        this.cgi,
-        this.type});
+      this.signalWCDMA,
+      this.connectionStatus,
+      this.network,
+      this.ci,
+      this.lac,
+      this.psc,
+      this.cid,
+      this.rnc,
+      this.cgi,
+      this.type});
 
   Wcdma.fromJson(Map<String, dynamic> json) {
     bandWCDMA = json['bandWCDMA'] != null
@@ -37,7 +37,7 @@ class Wcdma {
         : null;
     connectionStatus = json['connectionStatus'];
     network =
-    json['network'] != null ? new Network.fromJson(json['network']) : null;
+        json['network'] != null ? new Network.fromJson(json['network']) : null;
     type = json['type'];
     ci = json['ci'];
     lac = json['lac'];

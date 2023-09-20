@@ -15,17 +15,17 @@ class Nr {
 
   Nr(
       {this.bandNR,
-        this.nci,
-        this.pci,
-        this.signalNR,
-        this.tac,
-        this.connectionStatus,
-        this.network,
-        this.type});
+      this.nci,
+      this.pci,
+      this.signalNR,
+      this.tac,
+      this.connectionStatus,
+      this.network,
+      this.type});
 
   Nr.fromJson(Map<String, dynamic> json) {
     bandNR =
-    json['bandNR'] != null ? new BandNR.fromJson(json['bandNR']) : null;
+        json['bandNR'] != null ? new BandNR.fromJson(json['bandNR']) : null;
     nci = json['nci'];
     pci = json['pci'];
     signalNR = json['signalNR'] != null
@@ -34,7 +34,7 @@ class Nr {
     tac = json['tac'];
     connectionStatus = json['connectionStatus'];
     network =
-    json['network'] != null ? new Network.fromJson(json['network']) : null;
+        json['network'] != null ? new Network.fromJson(json['network']) : null;
     type = json['type'];
   }
 

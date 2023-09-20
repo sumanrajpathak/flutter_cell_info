@@ -8,11 +8,11 @@ class SignalTDSCDMA {
 
   SignalTDSCDMA(
       {this.bitErrorRate,
-        this.rscp,
-        this.rscpAsu,
-        this.rssi,
-        this.rssiAsu,
-        this.dbm});
+      this.rscp,
+      this.rscpAsu,
+      this.rssi,
+      this.rssiAsu,
+      this.dbm});
 
   SignalTDSCDMA.fromJson(Map<String, dynamic> json) {
     bitErrorRate = json['bitErrorRate'];

@@ -10,13 +10,13 @@ class SignalWCDMA {
 
   SignalWCDMA(
       {this.bitErrorRate,
-        this.ecio,
-        this.ecno,
-        this.rscp,
-        this.rscpAsu,
-        this.rssi,
-        this.rssiAsu,
-        this.dbm});
+      this.ecio,
+      this.ecno,
+      this.rscp,
+      this.rscpAsu,
+      this.rssi,
+      this.rssiAsu,
+      this.dbm});
 
   SignalWCDMA.fromJson(Map<String, dynamic> json) {
     bitErrorRate = json['bitErrorRate'];

@@ -1,4 +1,4 @@
-## 0.0.2
+## 0.0.1
 
 Lightweight Android library that is build over Telephony SDK. NetMonster core is extracted from NetMonster application and backports several Telephony features to older Android devices.
 

@@ -30,10 +30,10 @@ class SimInfoList {
 
   SimInfoList(
       {this.carrierName,
-        this.displayName,
-        this.mcc,
-        this.mnc,
-        this.subscriptionInfoNumber});
+      this.displayName,
+      this.mcc,
+      this.mnc,
+      this.subscriptionInfoNumber});
 
   SimInfoList.fromJson(Map<String, dynamic> json) {
     carrierName = json['carrierName'];

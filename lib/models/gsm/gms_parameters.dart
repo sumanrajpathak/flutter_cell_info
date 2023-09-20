@@ -15,29 +15,29 @@ class Gsm {
   int? bcc;
   String? cgi;
 
-  Gsm(
-      {this.bandGSM,
-        this.signalGSM,
-        this.connectionStatus,
-        this.network,
-        this.type,
-        this.cid,
-        this.lac,
-        this.bsic,
-        this.ncc,
-        this.bcc,
-        this.cgi,
-      });
+  Gsm({
+    this.bandGSM,
+    this.signalGSM,
+    this.connectionStatus,
+    this.network,
+    this.type,
+    this.cid,
+    this.lac,
+    this.bsic,
+    this.ncc,
+    this.bcc,
+    this.cgi,
+  });
 
   Gsm.fromJson(Map<String, dynamic> json) {
     bandGSM =
-    json['bandGSM'] != null ? new BandGSM.fromJson(json['bandGSM']) : null;
+        json['bandGSM'] != null ? new BandGSM.fromJson(json['bandGSM']) : null;
     signalGSM = json['signalGSM'] != null
         ? new SignalGSM.fromJson(json['signalGSM'])
         : null;
     connectionStatus = json['connectionStatus'];
     network =
-    json['network'] != null ? new Network.fromJson(json['network']) : null;
+        json['network'] != null ? new Network.fromJson(json['network']) : null;
     type = json['type'];
     cid = json['cid'];
     lac = json['lac'];

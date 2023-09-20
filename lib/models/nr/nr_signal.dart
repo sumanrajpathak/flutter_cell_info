@@ -11,14 +11,14 @@ class SignalNR {
 
   SignalNR(
       {this.csiRsrp,
-        this.csiRsrpAsu,
-        this.csiRsrq,
-        this.csiSinr,
-        this.ssRsrp,
-        this.ssRsrpAsu,
-        this.ssRsrq,
-        this.ssSinr,
-        this.dbm});
+      this.csiRsrpAsu,
+      this.csiRsrq,
+      this.csiSinr,
+      this.ssRsrp,
+      this.ssRsrpAsu,
+      this.ssRsrq,
+      this.ssSinr,
+      this.dbm});
 
   SignalNR.fromJson(Map<String, dynamic> json) {
     csiRsrp = json['csiRsrp'];

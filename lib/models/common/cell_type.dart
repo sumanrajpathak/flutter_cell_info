@@ -16,12 +16,12 @@ class CellType {
 
   CellType(
       {this.type,
-        this.wcdma,
-        this.nr,
-        this.lte,
-        this.gsm,
-        this.tdscdma,
-        this.cdma});
+      this.wcdma,
+      this.nr,
+      this.lte,
+      this.gsm,
+      this.tdscdma,
+      this.cdma});
 
   CellType.fromJson(Map<String, dynamic> json) {
     type = json['type'];
@@ -30,7 +30,7 @@ class CellType {
     lte = json['lte'] != null ? new Lte.fromJson(json['lte']) : null;
     gsm = json['gsm'] != null ? new Gsm.fromJson(json['gsm']) : null;
     tdscdma =
-    json['tdscdma'] != null ? new Tdscdma.fromJson(json['tdscdma']) : null;
+        json['tdscdma'] != null ? new Tdscdma.fromJson(json['tdscdma']) : null;
     cdma = json['cdma'] != null ? new Cdma.fromJson(json['cdma']) : null;
   }
 

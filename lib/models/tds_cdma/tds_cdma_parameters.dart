@@ -11,10 +11,10 @@ class Tdscdma {
 
   Tdscdma(
       {this.bandTDSCDMA,
-        this.signalTDSCDMA,
-        this.connectionStatus,
-        this.network,
-        this.type});
+      this.signalTDSCDMA,
+      this.connectionStatus,
+      this.network,
+      this.type});
 
   Tdscdma.fromJson(Map<String, dynamic> json) {
     bandTDSCDMA = json['bandTDSCDMA'] != null
@@ -25,7 +25,7 @@ class Tdscdma {
         : null;
     connectionStatus = json['connectionStatus'];
     network =
-    json['network'] != null ? new Network.fromJson(json['network']) : null;
+        json['network'] != null ? new Network.fromJson(json['network']) : null;
     type = json['type'];
   }
 

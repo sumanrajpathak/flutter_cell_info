@@ -11,14 +11,14 @@ class SignalLTE {
 
   SignalLTE(
       {this.cqi,
-        this.rsrp,
-        this.rsrpAsu,
-        this.rsrq,
-        this.rssi,
-        this.rssiAsu,
-        this.snr,
-        this.timingAdvance,
-        this.dbm});
+      this.rsrp,
+      this.rsrpAsu,
+      this.rsrq,
+      this.rssi,
+      this.rssiAsu,
+      this.snr,
+      this.timingAdvance,
+      this.dbm});
 
   SignalLTE.fromJson(Map<String, dynamic> json) {
     cqi = json['cqi'];

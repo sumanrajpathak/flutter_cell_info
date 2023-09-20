@@ -13,11 +13,11 @@ class Cdma {
 
   Cdma(
       {this.band,
-        this.bid,
-        this.signalCDMA,
-        this.connectionStatus,
-        this.network,
-        this.type});
+      this.bid,
+      this.signalCDMA,
+      this.connectionStatus,
+      this.network,
+      this.type});
 
   Cdma.fromJson(Map<String, dynamic> json) {
     band = json['band'] != null ? new Band.fromJson(json['band']) : null;
@@ -27,7 +27,7 @@ class Cdma {
         : null;
     connectionStatus = json['connectionStatus'];
     network =
-    json['network'] != null ? new Network.fromJson(json['network']) : null;
+        json['network'] != null ? new Network.fromJson(json['network']) : null;
     type = json['type'];
   }
 

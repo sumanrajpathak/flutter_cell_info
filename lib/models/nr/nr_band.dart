@@ -7,10 +7,10 @@ class BandNR {
 
   BandNR(
       {this.downlinkArfcn,
-        this.downlinkFrequency,
-        this.channelNumber,
-        this.name,
-        this.number});
+      this.downlinkFrequency,
+      this.channelNumber,
+      this.name,
+      this.number});
 
   BandNR.fromJson(Map<String, dynamic> json) {
     downlinkArfcn = json['downlinkArfcn'];

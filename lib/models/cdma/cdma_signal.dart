@@ -8,11 +8,11 @@ class SignalCDMA {
 
   SignalCDMA(
       {this.cdmaEcio,
-        this.cdmaRssi,
-        this.evdoEcio,
-        this.evdoRssi,
-        this.evdoSnr,
-        this.dbm});
+      this.cdmaRssi,
+      this.evdoEcio,
+      this.evdoRssi,
+      this.evdoSnr,
+      this.dbm});
 
   SignalCDMA.fromJson(Map<String, dynamic> json) {
     cdmaEcio = json['cdmaEcio'];

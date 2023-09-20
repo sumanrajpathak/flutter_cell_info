@@ -6,19 +6,18 @@ class CellsResponse {
   List<CellType>? primaryCellList;
   List<CellDataList>? cellDataList;
 
-  CellsResponse({this.neighboringCellList, this.primaryCellList, this.cellDataList});
+  CellsResponse(
+      {this.neighboringCellList, this.primaryCellList, this.cellDataList});
 
   CellsResponse.fromJson(Map<String, dynamic> json) {
     neighboringCellList = [];
     if (json['neighboringCellList'] != null) {
-
       json['neighboringCellList'].forEach((v) {
         neighboringCellList!.add(new CellType.fromJson(v));
       });
     }
     primaryCellList = [];
     if (json['primaryCellList'] != null) {
-
       json['primaryCellList'].forEach((v) {
         primaryCellList!.add(new CellType.fromJson(v));
       });
@@ -30,7 +29,6 @@ class CellsResponse {
         cellDataList!.add(new CellDataList.fromJson(v));
       });
     }
-
   }
 
   CellsResponse.fromDynamic(dynamic json) {
@@ -42,7 +40,6 @@ class CellsResponse {
     }
     primaryCellList = [];
     if (json['primaryCellList'] != null) {
-
       json['primaryCellList'].forEach((v) {
         primaryCellList!.add(new CellType.fromJson(v));
       });
@@ -54,7 +51,6 @@ class CellsResponse {
         cellDataList!.add(new CellDataList.fromJson(v));
       });
     }
-
   }
 
   Map<String, dynamic> toJson() {

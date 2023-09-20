@@ -20,22 +20,22 @@ class Lte {
 
   Lte(
       {this.bandLTE,
-        this.bandwidth,
-        this.cid,
-        this.eci,
-        this.enb,
-        this.pci,
-        this.signalLTE,
-        this.tac,
-        this.ecgi,
-        this.connectionStatus,
-        this.network,
-        this.subscriptionId,
-        this.type});
+      this.bandwidth,
+      this.cid,
+      this.eci,
+      this.enb,
+      this.pci,
+      this.signalLTE,
+      this.tac,
+      this.ecgi,
+      this.connectionStatus,
+      this.network,
+      this.subscriptionId,
+      this.type});
 
   Lte.fromJson(Map<String, dynamic> json) {
     bandLTE =
-    json['bandLTE'] != null ? new BandLTE.fromJson(json['bandLTE']) : null;
+        json['bandLTE'] != null ? new BandLTE.fromJson(json['bandLTE']) : null;
     bandwidth = json['bandwidth'];
     cid = json['cid'];
     eci = json['eci'];
@@ -48,7 +48,7 @@ class Lte {
     tac = json['tac'];
     connectionStatus = json['connectionStatus'];
     network =
-    json['network'] != null ? new Network.fromJson(json['network']) : null;
+        json['network'] != null ? new Network.fromJson(json['network']) : null;
     subscriptionId = json['subscriptionId'];
     type = json['type'];
   }

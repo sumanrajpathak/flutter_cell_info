@@ -17,10 +17,12 @@ class CellInfo {
     return version;
   }
 
-  static const MethodChannel _shared_preference = const MethodChannel('shared_preference');
+  static const MethodChannel _shared_preference =
+      const MethodChannel('shared_preference');
 
   static Future<String?> get sharedPreference async {
-    final String? version = await _shared_preference.invokeMethod('shared_preference');
+    final String? version =
+        await _shared_preference.invokeMethod('shared_preference');
     return version;
   }
 }

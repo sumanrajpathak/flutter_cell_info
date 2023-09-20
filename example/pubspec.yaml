@@ -6,13 +6,13 @@ description: Demonstrates how to use the cell_info plugin.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: ">=2.12.0 <4.0.0"
 
 dependencies:
   flutter:
     sdk: flutter
 
-  cell_info:
+  flutter_cell_info:
     # When depending on this package from a real application you should use:
     #   cell_info: ^x.y.z
     # See https://dart.dev/tools/pub/dependencies#version-constraints

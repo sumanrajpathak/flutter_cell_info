@@ -1,6 +1,6 @@
 name: flutter_cell_info
-description: This package allows you to obtain your public cellular info and many other information about it,based on NetMonster.
-version: 0.0.1
+description: Lightweight  library that is build over Telephony SDK. NetMonster core is extracted from NetMonster application and backports several Telephony features to older Android devices.
+version: 0.0.2
 homepage: https://github.com/devsumanrazz/flutter_cell_info
 
 environment:

@@ -1,7 +1,7 @@
-package com.airfore.cell_info.models.nr
+package com.sumanrajpathak.flutter_cell_info.models.nr
 
-import com.airfore.cell_info.models.CellData
-import com.airfore.cell_info.models.common.Network
+import com.sumanrajpathak.flutter_cell_info.models.CellData
+import com.sumanrajpathak.flutter_cell_info.models.common.Network
 import cz.mroczis.netmonster.core.model.cell.CellNr
 
 fun getNr(cell: CellNr, cellData: CellData): CellNR {

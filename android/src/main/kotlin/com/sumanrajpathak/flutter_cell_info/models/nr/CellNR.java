@@ -1,11 +1,11 @@
-package com.airfore.cell_info.models.nr;
+package com.sumanrajpathak.flutter_cell_info.models.nr;
 
 
 import androidx.annotation.Keep;
 
-import com.airfore.cell_info.models.common.Cell;
-import com.airfore.cell_info.models.lte.BandLTE;
-import com.airfore.cell_info.models.lte.SignalLTE;
+import com.sumanrajpathak.flutter_cell_info.models.common.Cell;
+import com.sumanrajpathak.flutter_cell_info.models.lte.BandLTE;
+import com.sumanrajpathak.flutter_cell_info.models.lte.SignalLTE;
 
 import java.io.Serializable;
 @Keep

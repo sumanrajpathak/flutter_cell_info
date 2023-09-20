@@ -1,17 +1,17 @@
-package com.airfore.cell_info
+package com.sumanrajpathak.flutter_cell_info
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Build
 import android.telephony.SubscriptionManager
 import androidx.annotation.RequiresApi
-import com.airfore.cell_info.models.*
-import com.airfore.cell_info.models.cdma.getCdma
-import com.airfore.cell_info.models.gsm.getGsm
-import com.airfore.cell_info.models.lte.getLte
-import com.airfore.cell_info.models.nr.getNr
-import com.airfore.cell_info.models.tdscdma.getTdscdma
-import com.airfore.cell_info.models.wcdma.getWcdma
+import com.sumanrajpathak.flutter_cell_info.models.*
+import com.sumanrajpathak.flutter_cell_info.models.cdma.getCdma
+import com.sumanrajpathak.flutter_cell_info.models.gsm.getGsm
+import com.sumanrajpathak.flutter_cell_info.models.lte.getLte
+import com.sumanrajpathak.flutter_cell_info.models.nr.getNr
+import com.sumanrajpathak.flutter_cell_info.models.tdscdma.getTdscdma
+import com.sumanrajpathak.flutter_cell_info.models.wcdma.getWcdma
 import com.google.gson.Gson
 import cz.mroczis.netmonster.core.factory.NetMonsterFactory
 import cz.mroczis.netmonster.core.model.cell.*

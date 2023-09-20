@@ -1,4 +1,4 @@
-package com.airfore.cell_info;
+package com.sumanrajpathak.flutter_cell_info;
 import android.content.Context;
 import android.content.SharedPreferences;
 

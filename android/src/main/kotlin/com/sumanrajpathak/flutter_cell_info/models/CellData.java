@@ -1,4 +1,4 @@
-package com.airfore.cell_info.models;
+package com.sumanrajpathak.flutter_cell_info.models;
 
 import androidx.annotation.Keep;
 

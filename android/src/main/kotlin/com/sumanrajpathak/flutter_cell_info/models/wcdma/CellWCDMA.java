@@ -1,11 +1,11 @@
-package com.airfore.cell_info.models.wcdma;
+package com.sumanrajpathak.flutter_cell_info.models.wcdma;
 
 
 import androidx.annotation.Keep;
 
-import com.airfore.cell_info.models.common.Cell;
-import com.airfore.cell_info.models.tdscdma.BandTDSCDMA;
-import com.airfore.cell_info.models.tdscdma.SignalTDSCDMA;
+import com.sumanrajpathak.flutter_cell_info.models.common.Cell;
+import com.sumanrajpathak.flutter_cell_info.models.tdscdma.BandTDSCDMA;
+import com.sumanrajpathak.flutter_cell_info.models.tdscdma.SignalTDSCDMA;
 
 import java.io.Serializable;
 @Keep

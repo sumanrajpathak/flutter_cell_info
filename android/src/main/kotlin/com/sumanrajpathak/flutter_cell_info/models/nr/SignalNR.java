@@ -1,8 +1,8 @@
-package com.airfore.cell_info.models.nr;
+package com.sumanrajpathak.flutter_cell_info.models.nr;
 
 import androidx.annotation.Keep;
 
-import com.airfore.cell_info.models.common.Signal;
+import com.sumanrajpathak.flutter_cell_info.models.common.Signal;
 
 import java.io.Serializable;
 @Keep

@@ -1,8 +1,8 @@
-package com.airfore.cell_info.models.cdma
+package com.sumanrajpathak.flutter_cell_info.models.cdma
 
-import com.airfore.cell_info.models.CellData
-import com.airfore.cell_info.models.common.Band
-import com.airfore.cell_info.models.common.Network
+import com.sumanrajpathak.flutter_cell_info.models.CellData
+import com.sumanrajpathak.flutter_cell_info.models.common.Band
+import com.sumanrajpathak.flutter_cell_info.models.common.Network
 import cz.mroczis.netmonster.core.model.cell.CellCdma
 
 fun getCdma(cell: CellCdma,cellData: CellData): CellCDMA {

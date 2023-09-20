@@ -1,12 +1,12 @@
-package com.airfore.cell_info.models.cdma;
+package com.sumanrajpathak.flutter_cell_info.models.cdma;
 
 
 import androidx.annotation.Keep;
 
-import com.airfore.cell_info.models.common.Band;
-import com.airfore.cell_info.models.common.Cell;
-import com.airfore.cell_info.models.nr.BandNR;
-import com.airfore.cell_info.models.nr.SignalNR;
+import com.sumanrajpathak.flutter_cell_info.models.common.Band;
+import com.sumanrajpathak.flutter_cell_info.models.common.Cell;
+import com.sumanrajpathak.flutter_cell_info.models.nr.BandNR;
+import com.sumanrajpathak.flutter_cell_info.models.nr.SignalNR;
 
 import java.io.Serializable;
 

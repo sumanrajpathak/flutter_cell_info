@@ -1,9 +1,9 @@
-package com.airfore.cell_info.models.gsm;
+package com.sumanrajpathak.flutter_cell_info.models.gsm;
 
 
 import androidx.annotation.Keep;
 
-import com.airfore.cell_info.models.common.Cell;
+import com.sumanrajpathak.flutter_cell_info.models.common.Cell;
 
 import java.io.Serializable;
 @Keep

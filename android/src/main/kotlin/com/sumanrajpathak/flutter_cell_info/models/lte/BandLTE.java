@@ -1,8 +1,8 @@
-package com.airfore.cell_info.models.lte;
+package com.sumanrajpathak.flutter_cell_info.models.lte;
 
 import androidx.annotation.Keep;
 
-import com.airfore.cell_info.models.common.Band;
+import com.sumanrajpathak.flutter_cell_info.models.common.Band;
 
 import java.io.Serializable;
 @Keep

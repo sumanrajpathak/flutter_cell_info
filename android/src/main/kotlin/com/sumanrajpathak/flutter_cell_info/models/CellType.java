@@ -1,13 +1,13 @@
-package com.airfore.cell_info.models;
+package com.sumanrajpathak.flutter_cell_info.models;
 
 import androidx.annotation.Keep;
 
-import com.airfore.cell_info.models.cdma.CellCDMA;
-import com.airfore.cell_info.models.gsm.CellGSM;
-import com.airfore.cell_info.models.lte.CellLTE;
-import com.airfore.cell_info.models.nr.CellNR;
-import com.airfore.cell_info.models.tdscdma.CellTDSCDMA;
-import com.airfore.cell_info.models.wcdma.CellWCDMA;
+import com.sumanrajpathak.flutter_cell_info.models.cdma.CellCDMA;
+import com.sumanrajpathak.flutter_cell_info.models.gsm.CellGSM;
+import com.sumanrajpathak.flutter_cell_info.models.lte.CellLTE;
+import com.sumanrajpathak.flutter_cell_info.models.nr.CellNR;
+import com.sumanrajpathak.flutter_cell_info.models.tdscdma.CellTDSCDMA;
+import com.sumanrajpathak.flutter_cell_info.models.wcdma.CellWCDMA;
 
 import java.io.Serializable;
 @Keep

@@ -1,7 +1,7 @@
-package com.airfore.cell_info.models.wcdma
+package com.sumanrajpathak.flutter_cell_info.models.wcdma
 
-import com.airfore.cell_info.models.CellData
-import com.airfore.cell_info.models.common.Network
+import com.sumanrajpathak.flutter_cell_info.models.CellData
+import com.sumanrajpathak.flutter_cell_info.models.common.Network
 import cz.mroczis.netmonster.core.model.band.BandWcdma
 import cz.mroczis.netmonster.core.model.cell.CellWcdma
 import cz.mroczis.netmonster.core.model.connection.PrimaryConnection

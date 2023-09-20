@@ -1,5 +1,11 @@
+## 0.0.4
+Package name mismatch error for netmonster plugins resolved
+## 0.0.3
+Support for SDK version 2.12
+
 ## 0.0.2
 Update Kotlin version for higher version supports.
+
 ## 0.0.1
 
 Lightweight Android library that is build over Telephony SDK. NetMonster core is extracted from NetMonster application and backports several Telephony features to older Android devices.

@@ -1,4 +1,6 @@
-group 'com.airfore.cell_info'
+package android
+
+group 'com.sumanrajpathak.flutter_cell_info'
 version '1.0-SNAPSHOT'
 
 buildscript {

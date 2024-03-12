@@ -1,12 +1,12 @@
 import 'dart:async';
 import 'dart:convert';
 
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_cell_info/CellResponse.dart';
 import 'package:flutter_cell_info/SIMInfoResponse.dart';
 import 'package:flutter_cell_info/flutter_cell_info.dart';
 import 'package:flutter_cell_info/models/common/cell_type.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,15 +18,28 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-   CellsResponse? _cellsResponse;
-
-  @override
-  void initState() {
-    super.initState();
-    startTimer();
-  }
+  CellsResponse? _cellsResponse;
 
   String? currentDBM;
+
+  Timer? timer;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Plugin example app'),
+        ),
+        body: _cellsResponse != null
+            ? Center(
+                child: Text(
+                    'Result ::\n $currentDBM \n primary = ${_cellsResponse?.primaryCellList?.length.toString()} \n neighbor = ${_cellsResponse?.neighboringCellList?.length}'),
+              )
+            : null,
+      ),
+    );
+  }
 
   // Platform messages are asynchronous, so we initialize in an async method.
   Future<void> initPlatformState() async {
@@ -40,21 +53,19 @@ class _MyAppState extends State<MyApp> {
 
       CellType currentCellInFirstChip = cellsResponse.primaryCellList![0];
       if (currentCellInFirstChip.type == "LTE") {
-        currentDBM =
-            "LTE dbm = ${currentCellInFirstChip.lte?.signalLTE?.dbm}" ;
+        currentDBM = "LTE dbm = ${currentCellInFirstChip.lte?.signalLTE?.dbm}";
       } else if (currentCellInFirstChip.type == "NR") {
-        currentDBM =
-            "NR dbm = ${currentCellInFirstChip.nr?.signalNR?.dbm}" ;
+        currentDBM = "NR dbm = ${currentCellInFirstChip.nr?.signalNR?.dbm}";
       } else if (currentCellInFirstChip.type == "WCDMA") {
-        currentDBM = "WCDMA dbm = ${currentCellInFirstChip.wcdma?.signalWCDMA?.dbm}" ;
+        currentDBM =
+            "WCDMA dbm = ${currentCellInFirstChip.wcdma?.signalWCDMA?.dbm}";
 
         print('currentDBM = ' + currentDBM!);
       }
 
       String? simInfo = await CellInfo.getSIMInfo;
       final simJson = json.decode(simInfo!);
-      print(
-          "desply name ${SIMInfoResponse.fromJson(simJson).simInfoList![0].displayName}");
+      print("display name ${SIMInfoResponse.fromJson(simJson).simInfoList}");
     } on PlatformException {
       _cellsResponse = null;
     }
@@ -70,23 +81,10 @@ class _MyAppState extends State<MyApp> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: const Text('Plugin example app'),
-        ),
-        body: _cellsResponse != null
-            ? Center(
-                child: Text(
-                    'mahmoud = ${currentDBM}\n primary = ${_cellsResponse?.primaryCellList?.length.toString()} \n neighbor = ${_cellsResponse?.neighboringCellList?.length}'),
-              )
-            : null,
-      ),
-    );
+  void initState() {
+    super.initState();
+    startTimer();
   }
-
-  Timer? timer;
 
   void startTimer() {
     const oneSec = const Duration(seconds: 3);
@@ -97,5 +95,4 @@ class _MyAppState extends State<MyApp> {
       },
     );
   }
-
 }

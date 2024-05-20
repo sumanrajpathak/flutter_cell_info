@@ -1,6 +1,7 @@
 import 'models/CellData.dart';
 import 'models/common/cell_type.dart';
 
+/// A class that represents the response from the getCellInfo method.
 class CellsResponse {
   List<CellType>? neighboringCellList;
   List<CellType>? primaryCellList;
@@ -9,6 +10,7 @@ class CellsResponse {
   CellsResponse(
       {this.neighboringCellList, this.primaryCellList, this.cellDataList});
 
+  /// Constructs a CellsResponse object from a JSON object.
   CellsResponse.fromJson(Map<String, dynamic> json) {
     neighboringCellList = [];
     if (json['neighboringCellList'] != null) {
@@ -31,6 +33,7 @@ class CellsResponse {
     }
   }
 
+  /// Constructs a CellsResponse object from a dynamic object.
   CellsResponse.fromDynamic(dynamic json) {
     neighboringCellList = [];
     if (json['neighboringCellList'] != null) {
@@ -53,6 +56,7 @@ class CellsResponse {
     }
   }
 
+  /// Converts a CellsResponse object to a JSON object.
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.neighboringCellList != null) {

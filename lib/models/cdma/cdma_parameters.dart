@@ -3,6 +3,7 @@ import 'package:flutter_cell_info/models/common/network.dart';
 import 'cdma_band.dart';
 import 'cdma_signal.dart';
 
+/// This class is used to parse the CDMA parameters.
 class Cdma {
   Band? band;
   int? bid;
@@ -11,6 +12,7 @@ class Cdma {
   Network? network;
   String? type;
 
+  /// Constructs a Cdma object.
   Cdma(
       {this.band,
       this.bid,
@@ -19,6 +21,7 @@ class Cdma {
       this.network,
       this.type});
 
+  /// Constructs a Cdma object from a JSON object.
   Cdma.fromJson(Map<String, dynamic> json) {
     band = json['band'] != null ? new Band.fromJson(json['band']) : null;
     bid = json['bid'];
@@ -31,6 +34,7 @@ class Cdma {
     type = json['type'];
   }
 
+  /// Converts a Cdma object to a JSON object.
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.band != null) {

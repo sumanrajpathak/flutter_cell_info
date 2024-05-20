@@ -1,3 +1,6 @@
+/// This class contains the CDMA signal strength parameters.
+/// Attributes: cdmaEcio, cdmaRssi, evdoEcio, evdoRssi, evdoSnr, dbm
+/// Methods: toJson, fromJson
 class SignalCDMA {
   int? cdmaEcio;
   int? cdmaRssi;
@@ -6,6 +9,7 @@ class SignalCDMA {
   int? evdoSnr;
   int? dbm;
 
+  /// Constructs a SignalCDMA object.
   SignalCDMA(
       {this.cdmaEcio,
       this.cdmaRssi,
@@ -14,6 +18,7 @@ class SignalCDMA {
       this.evdoSnr,
       this.dbm});
 
+  /// Constructs a SignalCDMA object from a JSON object.
   SignalCDMA.fromJson(Map<String, dynamic> json) {
     cdmaEcio = json['cdmaEcio'];
     cdmaRssi = json['cdmaRssi'];
@@ -23,6 +28,7 @@ class SignalCDMA {
     dbm = json['dbm'];
   }
 
+  /// Converts a SignalCDMA object to a JSON object.
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['cdmaEcio'] = this.cdmaEcio;

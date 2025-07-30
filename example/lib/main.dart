@@ -3,10 +3,10 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_cell_info/CellResponse.dart';
-import 'package:flutter_cell_info/SIMInfoResponse.dart';
+import 'package:flutter_cell_info/cell_response.dart';
 import 'package:flutter_cell_info/flutter_cell_info.dart';
 import 'package:flutter_cell_info/models/common/cell_type.dart';
+import 'package:flutter_cell_info/sim_info_response.dart';
 
 void main() {
   runApp(MyApp());

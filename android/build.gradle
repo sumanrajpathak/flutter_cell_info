@@ -1,4 +1,4 @@
-//package android
+package android
 
 group 'com.sumanrajpathak.flutter_cell_info'
 version '1.0-SNAPSHOT'
@@ -29,6 +29,12 @@ apply plugin: 'kotlin-android'
 
 android {
     compileSdkVersion 33
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     namespace 'com.sumanrajpathak.flutter_cell_info'
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'

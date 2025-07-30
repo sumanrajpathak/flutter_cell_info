@@ -36,6 +36,9 @@ android {
     defaultConfig {
         minSdkVersion 21
     }
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }
 
 dependencies {

@@ -5,6 +5,7 @@ import 'package:flutter_cell_info/models/nr/nr_parameters.dart';
 import 'package:flutter_cell_info/models/tds_cdma/tds_cdma_parameters.dart';
 import 'package:flutter_cell_info/models/wcdma/wcdma_parameters.dart';
 
+/// Model describing CellType data exchanged with the native plugin.
 class CellType {
   String? type;
   Wcdma? wcdma;
@@ -23,6 +24,7 @@ class CellType {
       this.tdscdma,
       this.cdma});
 
+  /// Creates a [CellType] from a decoded JSON [Map].
   CellType.fromJson(Map<String, dynamic> json) {
     type = json['type'];
     wcdma = json['wcdma'] != null ? new Wcdma.fromJson(json['wcdma']) : null;
@@ -34,6 +36,7 @@ class CellType {
     cdma = json['cdma'] != null ? new Cdma.fromJson(json['cdma']) : null;
   }
 
+  /// Converts this [CellType] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['type'] = this.type;

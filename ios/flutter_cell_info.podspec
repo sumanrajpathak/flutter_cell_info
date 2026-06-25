@@ -4,7 +4,7 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_cell_info'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = 'Cell Info Plugin'
   s.description      = 'Cell Info Plugin'
   s.homepage         = 'https://github.com/sumanrajpathak/flutter_cell_info'

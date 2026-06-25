@@ -3,6 +3,7 @@ import 'package:flutter_cell_info/models/common/network.dart';
 import 'nr_band.dart';
 import 'nr_signal.dart';
 
+/// Model describing Nr data exchanged with the native plugin.
 class Nr {
   BandNR? bandNR;
   int? nci;
@@ -23,6 +24,7 @@ class Nr {
       this.network,
       this.type});
 
+  /// Creates a [Nr] from a decoded JSON [Map].
   Nr.fromJson(Map<String, dynamic> json) {
     bandNR =
         json['bandNR'] != null ? new BandNR.fromJson(json['bandNR']) : null;
@@ -38,6 +40,7 @@ class Nr {
     type = json['type'];
   }
 
+  /// Converts this [Nr] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.bandNR != null) {

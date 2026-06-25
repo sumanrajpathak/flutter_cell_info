@@ -2,6 +2,7 @@ import 'package:flutter_cell_info/models/common/network.dart';
 import 'package:flutter_cell_info/models/wcdma/wcdma_band.dart';
 import 'package:flutter_cell_info/models/wcdma/wcdma_signal.dart';
 
+/// Model describing Wcdma data exchanged with the native plugin.
 class Wcdma {
   BandWCDMA? bandWCDMA;
   SignalWCDMA? signalWCDMA;
@@ -28,6 +29,7 @@ class Wcdma {
       this.cgi,
       this.type});
 
+  /// Creates a [Wcdma] from a decoded JSON [Map].
   Wcdma.fromJson(Map<String, dynamic> json) {
     bandWCDMA = json['bandWCDMA'] != null
         ? new BandWCDMA.fromJson(json['bandWCDMA'])
@@ -47,6 +49,7 @@ class Wcdma {
     cgi = json['cgi'];
   }
 
+  /// Converts this [Wcdma] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.bandWCDMA != null) {

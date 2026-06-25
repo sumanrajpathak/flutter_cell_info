@@ -1,3 +1,4 @@
+/// Model describing BandNR data exchanged with the native plugin.
 class BandNR {
   int? downlinkArfcn;
   int? downlinkFrequency;
@@ -12,6 +13,7 @@ class BandNR {
       this.name,
       this.number});
 
+  /// Creates a [BandNR] from a decoded JSON [Map].
   BandNR.fromJson(Map<String, dynamic> json) {
     downlinkArfcn = json['downlinkArfcn'];
     downlinkFrequency = json['downlinkFrequency'];
@@ -20,6 +22,7 @@ class BandNR {
     number = json['number'];
   }
 
+  /// Converts this [BandNR] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['downlinkArfcn'] = this.downlinkArfcn;

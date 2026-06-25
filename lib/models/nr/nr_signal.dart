@@ -1,3 +1,4 @@
+/// Model describing SignalNR data exchanged with the native plugin.
 class SignalNR {
   int? csiRsrp;
   int? csiRsrpAsu;
@@ -20,6 +21,7 @@ class SignalNR {
       this.ssSinr,
       this.dbm});
 
+  /// Creates a [SignalNR] from a decoded JSON [Map].
   SignalNR.fromJson(Map<String, dynamic> json) {
     csiRsrp = json['csiRsrp'];
     csiRsrpAsu = json['csiRsrpAsu'];
@@ -32,6 +34,7 @@ class SignalNR {
     dbm = json['dbm'];
   }
 
+  /// Converts this [SignalNR] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['csiRsrp'] = this.csiRsrp;

@@ -1,3 +1,4 @@
+/// Model describing BandWCDMA data exchanged with the native plugin.
 class BandWCDMA {
   int? downlinkUarfcn;
   int? channelNumber;
@@ -6,6 +7,7 @@ class BandWCDMA {
 
   BandWCDMA({this.downlinkUarfcn, this.channelNumber, this.name, this.number});
 
+  /// Creates a [BandWCDMA] from a decoded JSON [Map].
   BandWCDMA.fromJson(Map<String, dynamic> json) {
     downlinkUarfcn = json['downlinkUarfcn'];
     channelNumber = json['channelNumber'];
@@ -13,6 +15,7 @@ class BandWCDMA {
     number = json['number'];
   }
 
+  /// Converts this [BandWCDMA] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['downlinkUarfcn'] = this.downlinkUarfcn;

@@ -3,6 +3,7 @@ import 'package:flutter_cell_info/models/common/network.dart';
 import 'lte_band.dart';
 import 'lte_signal.dart';
 
+/// Model describing Lte data exchanged with the native plugin.
 class Lte {
   BandLTE? bandLTE;
   int? bandwidth;
@@ -33,6 +34,7 @@ class Lte {
       this.subscriptionId,
       this.type});
 
+  /// Creates a [Lte] from a decoded JSON [Map].
   Lte.fromJson(Map<String, dynamic> json) {
     bandLTE =
         json['bandLTE'] != null ? new BandLTE.fromJson(json['bandLTE']) : null;
@@ -53,6 +55,7 @@ class Lte {
     type = json['type'];
   }
 
+  /// Converts this [Lte] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.bandLTE != null) {

@@ -2,6 +2,7 @@ import 'package:flutter_cell_info/models/common/network.dart';
 import 'gsm_band.dart';
 import 'gsm_signal.dart';
 
+/// Model describing Gsm data exchanged with the native plugin.
 class Gsm {
   BandGSM? bandGSM;
   SignalGSM? signalGSM;
@@ -29,6 +30,7 @@ class Gsm {
     this.cgi,
   });
 
+  /// Creates a [Gsm] from a decoded JSON [Map].
   Gsm.fromJson(Map<String, dynamic> json) {
     bandGSM =
         json['bandGSM'] != null ? new BandGSM.fromJson(json['bandGSM']) : null;
@@ -47,6 +49,7 @@ class Gsm {
     cgi = json['cgi'];
   }
 
+  /// Converts this [Gsm] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.bandGSM != null) {

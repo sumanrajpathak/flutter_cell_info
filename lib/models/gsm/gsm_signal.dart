@@ -1,3 +1,4 @@
+/// Model describing SignalGSM data exchanged with the native plugin.
 class SignalGSM {
   int? bitErrorRate;
   int? rssi;
@@ -6,6 +7,7 @@ class SignalGSM {
 
   SignalGSM({this.bitErrorRate, this.rssi, this.timingAdvance, this.dbm});
 
+  /// Creates a [SignalGSM] from a decoded JSON [Map].
   SignalGSM.fromJson(Map<String, dynamic> json) {
     bitErrorRate = json['bitErrorRate'];
     rssi = json['rssi'];
@@ -13,6 +15,7 @@ class SignalGSM {
     dbm = json['dbm'];
   }
 
+  /// Converts this [SignalGSM] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['bitErrorRate'] = this.bitErrorRate;

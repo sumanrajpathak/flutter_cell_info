@@ -1,3 +1,4 @@
+/// Model describing BandLTE data exchanged with the native plugin.
 class BandLTE {
   int? downlinkEarfcn;
   int? channelNumber;
@@ -6,6 +7,7 @@ class BandLTE {
 
   BandLTE({this.downlinkEarfcn, this.channelNumber, this.name, this.number});
 
+  /// Creates a [BandLTE] from a decoded JSON [Map].
   BandLTE.fromJson(Map<String, dynamic> json) {
     downlinkEarfcn = json['downlinkEarfcn'];
     channelNumber = json['channelNumber'];
@@ -13,6 +15,7 @@ class BandLTE {
     number = json['number'];
   }
 
+  /// Converts this [BandLTE] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['downlinkEarfcn'] = this.downlinkEarfcn;

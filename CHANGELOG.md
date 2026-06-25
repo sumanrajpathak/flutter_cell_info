@@ -1,8 +1,13 @@
-# 0.0.6
+# 0.0.7
 
 * Added iOS support via CoreTelephony (carrier/SIM info and current radio access
   technology). Note: iOS does not expose cell identity, signal strength or
   neighbouring cells through any public API, so those fields are unavailable on iOS.
+* Added an iOS privacy manifest (`PrivacyInfo.xcprivacy`) declaring `NSUserDefaults` usage.
+* Documented the public API model classes.
+
+# 0.0.6
+
 * Updated dependencies
 * Bug fixes and improvements
 

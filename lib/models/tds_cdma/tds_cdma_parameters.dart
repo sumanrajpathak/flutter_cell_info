@@ -2,6 +2,7 @@ import 'package:flutter_cell_info/models/common/network.dart';
 import 'package:flutter_cell_info/models/tds_cdma/tds_cdma_signal.dart';
 import 'package:flutter_cell_info/models/wcdma/wcdma_band.dart';
 
+/// Model describing Tdscdma data exchanged with the native plugin.
 class Tdscdma {
   BandWCDMA? bandTDSCDMA;
   SignalTDSCDMA? signalTDSCDMA;
@@ -16,6 +17,7 @@ class Tdscdma {
       this.network,
       this.type});
 
+  /// Creates a [Tdscdma] from a decoded JSON [Map].
   Tdscdma.fromJson(Map<String, dynamic> json) {
     bandTDSCDMA = json['bandTDSCDMA'] != null
         ? new BandWCDMA.fromJson(json['bandTDSCDMA'])
@@ -29,6 +31,7 @@ class Tdscdma {
     type = json['type'];
   }
 
+  /// Converts this [Tdscdma] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     if (this.bandTDSCDMA != null) {

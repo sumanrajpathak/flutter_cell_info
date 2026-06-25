@@ -1,3 +1,4 @@
+/// Model describing SignalWCDMA data exchanged with the native plugin.
 class SignalWCDMA {
   int? bitErrorRate;
   int? ecio;
@@ -18,6 +19,7 @@ class SignalWCDMA {
       this.rssiAsu,
       this.dbm});
 
+  /// Creates a [SignalWCDMA] from a decoded JSON [Map].
   SignalWCDMA.fromJson(Map<String, dynamic> json) {
     bitErrorRate = json['bitErrorRate'];
     ecio = json['ecio'];
@@ -29,6 +31,7 @@ class SignalWCDMA {
     dbm = json['dbm'];
   }
 
+  /// Converts this [SignalWCDMA] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['bitErrorRate'] = this.bitErrorRate;

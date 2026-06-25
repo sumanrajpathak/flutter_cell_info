@@ -1,3 +1,4 @@
+/// Model describing SignalLTE data exchanged with the native plugin.
 class SignalLTE {
   int? cqi;
   double? rsrp;
@@ -20,6 +21,7 @@ class SignalLTE {
       this.timingAdvance,
       this.dbm});
 
+  /// Creates a [SignalLTE] from a decoded JSON [Map].
   SignalLTE.fromJson(Map<String, dynamic> json) {
     cqi = json['cqi'];
     rsrp = json['rsrp'];
@@ -32,6 +34,7 @@ class SignalLTE {
     dbm = json['dbm'];
   }
 
+  /// Converts this [SignalLTE] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['cqi'] = this.cqi;

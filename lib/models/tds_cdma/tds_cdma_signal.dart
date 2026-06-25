@@ -1,3 +1,4 @@
+/// Model describing SignalTDSCDMA data exchanged with the native plugin.
 class SignalTDSCDMA {
   int? bitErrorRate;
   int? rscp;
@@ -14,6 +15,7 @@ class SignalTDSCDMA {
       this.rssiAsu,
       this.dbm});
 
+  /// Creates a [SignalTDSCDMA] from a decoded JSON [Map].
   SignalTDSCDMA.fromJson(Map<String, dynamic> json) {
     bitErrorRate = json['bitErrorRate'];
     rscp = json['rscp'];
@@ -23,6 +25,7 @@ class SignalTDSCDMA {
     dbm = json['dbm'];
   }
 
+  /// Converts this [SignalTDSCDMA] into a JSON-serializable [Map].
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['bitErrorRate'] = this.bitErrorRate;

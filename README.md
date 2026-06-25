@@ -105,5 +105,27 @@ when detecting current network type.
  - Detection of serving cells in 'emergency calls only' mode.
  - PLMN addition to non-serving cells in GSM, WCDMA, LTE, TD-SCDMA and NR networks.
 
+## Platform support
+
+| Feature                              | Android | iOS |
+|--------------------------------------|:-------:|:---:|
+| Carrier / SIM info (name, MCC, MNC)  | ✅      | ✅¹ |
+| Current radio technology (LTE/NR/…)  | ✅      | ✅  |
+| Cell identity (CID, TAC, PCI, eNb …) | ✅      | ❌² |
+| Signal strength (dBm, RSRP, RSRQ …)  | ✅      | ❌² |
+| Neighbouring cells                   | ✅      | ❌² |
+
+¹ Apple deprecated `CTCarrier` in iOS 16; on iOS 16+ it returns placeholder
+values (`--`, `65535`).
+
+² iOS exposes **no public API** for cell-tower identity, signal strength or
+neighbouring cells. On iOS, `getCellInfo` therefore returns the current radio
+access technology per SIM in `primaryCellList` with identity/signal fields left
+null, and `neighboringCellList` is always empty.
+
+The Dart API (`CellInfo.getCellInfo`, `CellInfo.getSIMInfo`,
+`CellInfo.sharedPreference`) and JSON response shape are identical across both
+platforms.
+
 ## Originally forked from  [cell_info](https://github.com/eslamfaisal/FlutterCellInfo)
 Credit to   - [eslamfaisal](https://github.com/eslamfaisal)

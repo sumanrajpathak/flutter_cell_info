@@ -1,5 +1,8 @@
 # 0.0.6
 
+* Added iOS support via CoreTelephony (carrier/SIM info and current radio access
+  technology). Note: iOS does not expose cell identity, signal strength or
+  neighbouring cells through any public API, so those fields are unavailable on iOS.
 * Updated dependencies
 * Bug fixes and improvements
 

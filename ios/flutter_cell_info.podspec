@@ -4,18 +4,20 @@
 #
 Pod::Spec.new do |s|
   s.name             = 'flutter_cell_info'
-  s.version          = '0.0.5'
+  s.version          = '0.0.6'
   s.summary          = 'Cell Info Plugin'
   s.description      = 'Cell Info Plugin'
-  s.homepage         = 'http://devsumanrazz/flutter_cell_info'
+  s.homepage         = 'https://github.com/sumanrajpathak/flutter_cell_info'
   s.license          = { :file => '../LICENSE' }
   s.license       = { :type => 'BSD' }
   s.author           = { ' Company' => 'pathaksumanraj@gmail.com' }
-  s.source           = { :git => 'http://devsumanrazz/flutter_cell_info.git' }
-  
+  s.source           = { :git => 'https://github.com/sumanrajpathak/flutter_cell_info.git' }
+
   s.source_files = 'Classes/**/*'
   s.public_header_files = 'Classes/**/*.h'
   s.dependency 'Flutter'
+  s.frameworks = 'CoreTelephony'
+  s.resource_bundles = {'flutter_cell_info_privacy' => ['Resources/PrivacyInfo.xcprivacy']}
   s.platform = :ios, '11.0'
   s.ios.deployment_target  = '11.0'
 
